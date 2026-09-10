@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js Grundlagen – Interaktive Präsentation</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --accent: #22c55e;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #020617, #0f172a);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .deck {
+      width: min(920px, 100%);
+      background: var(--card);
+      border: 1px solid #334155;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+    .slide {
+      display: none;
+      padding: 2rem;
+      min-height: 400px;
+    }
+    .slide.active { display: block; }
+    h1, h2 { margin-top: 0; color: #f8fafc; }
+    p, li { line-height: 1.55; }
+    ul { padding-left: 1.2rem; }
+    code, pre {
+      font-family: Consolas, Monaco, monospace;
+      background: #0b1220;
+      border: 1px solid #334155;
+      border-radius: 8px;
+    }
+    pre {
+      padding: 0.9rem;
+      overflow-x: auto;
+      color: #cbd5e1;
+    }
+    .controls {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      border-top: 1px solid #334155;
+      background: #111827;
+    }
+    .left { display: flex; gap: 0.75rem; }
+    button {
+      border: 0;
+      border-radius: 8px;
+      background: #334155;
+      color: #f8fafc;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+    }
+    button:hover { background: #475569; }
+    .primary { background: var(--accent); color: #052e16; font-weight: 700; }
+    .primary:hover { background: #4ade80; }
+    .status { color: var(--muted); font-size: 0.95rem; }
+    .quiz button { margin-right: 0.6rem; margin-top: 0.5rem; }
+    .result { margin-top: 0.8rem; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-live="polite">
+    <section class="slide active">
+      <h1>Node.js in einfachen Worten</h1>
+      <p>Diese interaktive Web-Präsentation erklärt die Grundlagen von Node.js für Studenten – mit kurzen Erklärungen und praktischen Beispielen.</p>
+      <ul>
+        <li>Was ist Node.js?</li>
+        <li>Warum wird es gebraucht?</li>
+        <li>Wie sehen erste praktische Anwendungen aus?</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Was ist Node.js?</h2>
+      <p>Node.js ist eine Umgebung, mit der man JavaScript außerhalb des Browsers ausführen kann – zum Beispiel auf einem Server.</p>
+      <ul>
+        <li>Schnell durch die V8-Engine</li>
+        <li>Viele Bibliotheken über npm</li>
+        <li>Ideal für APIs und Echtzeit-Anwendungen</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Wofür wird Node.js benötigt?</h2>
+      <ul>
+        <li>Webserver bauen</li>
+        <li>REST-APIs bereitstellen</li>
+        <li>Dateien lesen/schreiben</li>
+        <li>Tools und Skripte automatisieren</li>
+      </ul>
+      <p><strong>Vorteil für Studenten:</strong> Eine Sprache (JavaScript) für Frontend und Backend.</p>
+    </section>
+
+    <section class="slide">
+      <h2>Praktisches Beispiel 1: Einfacher Webserver</h2>
+      <pre><code>const http = require("http");
+
+const server = http.createServer((req, res) =&gt; {
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end("Hallo von Node.js!");
+});
+
+server.listen(3000);</code></pre>
+      <p>Der Code startet einen Server auf Port <code>3000</code> und sendet eine Text-Antwort zurück.</p>
+    </section>
+
+    <section class="slide">
+      <h2>Praktisches Beispiel 2: Datei lesen</h2>
+      <pre><code>const fs = require("fs");
+
+fs.readFile("notizen.txt", "utf8", (err, data) =&gt; {
+  if (err) return console.error(err);
+  console.log(data);
+});</code></pre>
+      <p>Damit kann man z. B. Konfigurations- oder Textdateien verarbeiten.</p>
+    </section>
+
+    <section class="slide quiz">
+      <h2>Kurzer Wissens-Check</h2>
+      <p>Kann Node.js JavaScript außerhalb des Browsers ausführen?</p>
+      <button data-answer="yes" class="primary">Ja</button>
+      <button data-answer="no">Nein</button>
+      <p id="quizResult" class="result" aria-live="polite"></p>
+    </section>
+
+    <section class="slide">
+      <h2>Zusammenfassung</h2>
+      <p>Node.js hilft Studenten, Backend-Konzepte einfach zu lernen und praktisch anzuwenden.</p>
+      <ul>
+        <li>Einfacher Einstieg mit JavaScript</li>
+        <li>Viele reale Einsatzmöglichkeiten</li>
+        <li>Gute Basis für moderne Webentwicklung</li>
+      </ul>
+    </section>
+
+    <div class="controls">
+      <div class="left">
+        <button id="prev">Zurück</button>
+        <button id="next" class="primary">Weiter</button>
+      </div>
+      <span class="status" id="status">Folie 1 / 7</span>
+    </div>
+  </main>
+
+  <script>
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    const status = document.getElementById("status");
+    const quizResult = document.getElementById("quizResult");
+    let current = 0;
+
+    function showSlide(index) {
+      current = Math.max(0, Math.min(index, slides.length - 1));
+      slides.forEach((slide, i) => slide.classList.toggle("active", i === current));
+      status.textContent = `Folie ${current + 1} / ${slides.length}`;
+      prev.disabled = current === 0;
+      next.disabled = current === slides.length - 1;
+    }
+
+    prev.addEventListener("click", () => showSlide(current - 1));
+    next.addEventListener("click", () => showSlide(current + 1));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") showSlide(current - 1);
+      if (event.key === "ArrowRight") showSlide(current + 1);
+    });
+
+    document.querySelectorAll("[data-answer]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const isCorrect = button.dataset.answer === "yes";
+        quizResult.textContent = isCorrect ? "Richtig! ✅" : "Nicht ganz. Node.js läuft außerhalb des Browsers.";
+      });
+    });
+
+    showSlide(0);
+  </script>
+</body>
+</html>
