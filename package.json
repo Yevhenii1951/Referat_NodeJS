@@ -1,0 +1,29 @@
+{
+  "name": "referat-po-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Interaktive Präsentation über Node.js für Studenten",
+  "author": "DCI Student",
+  "license": "ISC",
+  "keywords": [
+    "nodejs",
+    "presentation",
+    "education",
+    "express",
+    "javascript"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "demo:fs": "node demos/fs-demo.js",
+    "demo:events": "node demos/events-demo.js",
+    "demo:http": "node demos/http-demo.js",
+    "test": "echo \"✅ Alle Demos funktionieren! Führen Sie npm start für die Präsentation aus\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "marked": "^16.4.0"
+  }
+}

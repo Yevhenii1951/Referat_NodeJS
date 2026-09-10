@@ -1,0 +1,8 @@
+Hallo von Node.js!
+Diese Datei wurde automatisch erstellt am 30.10.2025, 11:27:51
+
+Node.js ermöglicht:
+- 📖 Dateien lesen
+- ✍️ Dateien erstellen  
+- 🗂️ Mit Ordnern arbeiten
+- 👀 Änderungen überwachen

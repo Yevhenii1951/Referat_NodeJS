@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node.js - Revolution in der Webentwicklung</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <h1 class="nav-title">🚀 Node.js Presentation</h1>
+        <div class="nav-links">
+          <a href="#intro" onclick="showSection('intro')">Einführung</a>
+          <a href="#history" onclick="showSection('history')">Geschichte</a>
+          <a href="#architecture" onclick="showSection('architecture')"
+            >Architektur</a
+          >
+          <a href="#features" onclick="showSection('features')">Features</a>
+          <a href="#demos" onclick="showSection('demos')">Demos</a>
+          <a href="#facts" onclick="showSection('facts')">Fakten</a>
+          <a
+            href="#developer-benefits"
+            onclick="showSection('developer-benefits')"
+            >Vorteile</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Abschnitt 1: Einführung -->
+    <section id="intro" class="section active">
+      <div class="container">
+        <div class="hero">
+          <h1 class="hero-title">
+            <span class="node-green">Node.js</span>
+            <br />Revolution in der Webentwicklung
+          </h1>
+          <p class="hero-subtitle">JavaScript außerhalb des Browsers</p>
+          <div class="hero-animation">
+            <div class="pulse-ring"></div>
+            <div class="js-logo">JS</div>
+          </div>
+        </div>
+
+        <div class="intro-grid">
+          <div class="intro-card">
+            <div class="card-icon">⚡</div>
+            <h3>Schnell</h3>
+            <p>Basiert auf der V8 Chrome Engine</p>
+          </div>
+          <div class="intro-card">
+            <div class="card-icon">🌐</div>
+            <h3>Vielseitig</h3>
+            <p>Frontend und Backend in einer Sprache</p>
+          </div>
+          <div class="intro-card">
+            <div class="card-icon">📦</div>
+            <h3>Reiches Ökosystem</h3>
+            <p>Millionen von Paketen in NPM</p>
+          </div>
+        </div>
+
+        <div class="simple-explanation">
+          <h2>🤔 Was ist Node.js einfach erklärt?</h2>
+          <div class="analogy">
+            <p>
+              <strong>Stellen Sie sich vor:</strong> JavaScript konnte früher
+              nur im Browser funktionieren, wie ein Fisch nur im Wasser.
+            </p>
+            <p>
+              <strong>Node.js</strong> ist wie ein spezieller Anzug für den
+              Fisch, der ihm ermöglicht, an Land zu leben!
+            </p>
+            <p>
+              <strong>Jetzt</strong> kann JavaScript Server erstellen, mit
+              Dateien arbeiten, Datenbanken verwalten und vieles mehr!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sektion 2: Geschichte -->
+    <section id="history" class="section">
+      <div class="container">
+        <h2 class="section-title">📜 Node.js: Complete Development History</h2>
+        <p class="history-intro">
+          Von einer revolutionären Idee eines einzelnen Entwicklers bis zur
+          weltweit meistgenutzten Backend-Technologie - die faszinierende
+          Entstehungsgeschichte von Node.js
+        </p>
+
+        <div class="timeline-enhanced">
+          <!-- Timeline Line -->
+          <div class="timeline-line"></div>
+
+          <div class="timeline-item-enhanced" data-year="2009">
+            <div class="timeline-year-circle">
+              <span class="year">2009</span>
+              <div class="year-pulse"></div>
+            </div>
+            <div class="timeline-content-enhanced">
+              <div class="timeline-icon">💡</div>
+              <h3>Die revolutionäre Idee</h3>
+              <div class="timeline-details">
+                <p>
+                  <strong>Ryan Dahl's Frustration:</strong> Langsame
+                  Apache-Webserver mit Thread-basierter Architektur
+                </p>
+                <div class="detail-list">
+                  <div class="detail-item">
+                    <strong>Problem:</strong> Jede HTTP-Verbindung = neuer
+                    Thread (2MB RAM)
+                  </div>
+                  <div class="detail-item">
+                    <strong>Limit:</strong> Nur ~4000 gleichzeitige Verbindungen
+                  </div>
+                  <div class="detail-item">
+                    <strong>Vision:</strong> Event-driven, non-blocking I/O
+                    Server
+                  </div>
+                </div>
+                <div class="timeline-fact">
+                  <strong>💼 Kontext:</strong> Ryan arbeitete bei Joyent und
+                  experimentierte mit V8 Engine
+                </div>
+              </div>
+            </div>
+            <div class="timeline-arrow">➜</div>
+          </div>
+
+          <div class="timeline-item-enhanced" data-year="2009-end">
+            <div class="timeline-year-circle">
+              <span class="year">Nov 2009</span>
+              <div class="year-pulse"></div>
+            </div>
+            <div class="timeline-content-enhanced">
+              <div class="timeline-icon">🚀</div>
+              <h3>Erste öffentliche Demonstration</h3>
+              <div class="timeline-details">
+                <p>
+                  <strong>JSConf Europe:</strong> Ryan Dahl präsentiert Node.js
+                  der Welt
+                </p>
+                <div class="detail-list">
+                  <div class="detail-item">
+                    <strong>Demo:</strong> 20-Zeilen Chat-Server für 1000+
+                    Nutzer
+                  </div>
+                  <div class="detail-item">
+                    <strong>Reaktion:</strong> Standing Ovations vom Publikum
+                  </div>
+                  <div class="detail-item">
+                    <strong>Motto:</strong> "JavaScript on the Server"
+                  </div>
+                </div>
+                <div class="timeline-fact">
+                  <strong>🎯 Durchbruch:</strong> Erste Version 0.0.1 nur 3
+                  Wochen nach der Präsentation
+                </div>
+              </div>
+            </div>
+            <div class="timeline-arrow">➜</div>
+          </div>
+
+          <div class="timeline-item-enhanced" data-year="2010">
+            <div class="timeline-year-circle">
+              <span class="year">2010</span>
+              <div class="year-pulse"></div>
+            </div>
+            <div class="timeline-content-enhanced">
+              <div class="timeline-icon">📦</div>
+              <h3>Ecosystem-Entstehung</h3>
+              <div class="timeline-details">
+                <p>
+                  <strong>Community Growth:</strong> Erste Module und Pakete
+                  entstehen
+                </p>
+                <div class="detail-list">
+                  <div class="detail-item">
+                    <strong>Express.js:</strong> TJ Holowaychuk erstellt das
+                    erste Web-Framework
+                  </div>
+                  <div class="detail-item">
+                    <strong>Socket.io:</strong> Real-time Web-Apps werden
+                    möglich
+                  </div>
+                  <div class="detail-item">
+                    <strong>Wachstum:</strong> Von 12 auf 500+ verfügbare Module
+                  </div>
+                </div>
+                <div class="timeline-fact">
+                  <strong>📈 Statistik:</strong> GitHub Stars steigen von 100
+                  auf 15,000+
+                </div>
+              </div>
+            </div>
+            <div class="timeline-arrow">➜</div>
+          </div>
+
+          <div class="timeline-item-enhanced" data-year="2011">
+            <div class="timeline-year-circle">
+              <span class="year">2011</span>
+              <div class="year-pulse"></div>
+            </div>
+            <div class="timeline-content-enhanced">
+              <div class="timeline-icon">🛠️</div>
+              <h3>NPM Revolution</h3>
+              <div class="timeline-details">
+                <p>
+                  <strong>Isaac Z. Schlueter:</strong> Erschafft den Node
+                  Package Manager
+                </p>
+                <div class="detail-list">
+                  <div class="detail-item">
+                    <strong>Innovation:</strong> Einfachste Paket-Installation
+                    mit "npm install"
+                  </div>
+                  <div class="detail-item">
+                    <strong>Standard:</strong> package.json für Dependency
+                    Management
+                  </div>
+                  <div class="detail-item">
+                    <strong>Impact:</strong> Macht Node.js zur zugänglichsten
+                    Plattform
+                  </div>
+                </div>
+                <div class="timeline-fact">
+                  <strong>🎯 Meilenstein:</strong> NPM wird Standard-Bestandteil
+                  von Node.js
+                </div>
+              </div>
+            </div>
+            <div class="timeline-arrow">➜</div>
+          </div>
+
+          <div class="timeline-item-enhanced" data-year="2012-2015">
+            <div class="timeline-year-circle">
+              <span class="year">2012-15</span>
+              <div class="year-pulse"></div>
+            </div>
+            <div class="timeline-content-enhanced">
+              <div class="timeline-icon">🏢</div>
+              <h3>Enterprise Adoption</h3>
+              <div class="timeline-details">
+                <p>
+                  <strong>Große Unternehmen:</strong> Node.js erobert die
+                  Industrie
+                </p>
+                <div class="detail-list">
+                  <div class="detail-item">
+                    <strong>Netflix:</strong> Kompletter Umstieg von Java auf
+                    Node.js
+                  </div>
+                  <div class="detail-item">
+                    <strong>PayPal:</strong> 2x schnellere Performance, 50%
+                    weniger Code
+                  </div>
+                  <div class="detail-item">
+                    <strong>LinkedIn:</strong> 10x bessere Performance für
+                    mobile Apps
+                  </div>
+                </div>
+                <div class="timeline-fact">
+                  <strong>📊 Erfolg:</strong> Startup-Zeit um 70% reduziert, 2x
+                  weniger Server benötigt
+                </div>
+              </div>
+            </div>
+            <div class="timeline-arrow">➜</div>
+          </div>
+
+          <div class="timeline-item-enhanced" data-year="2015">
+            <div class="timeline-year-circle">
+              <span class="year">2015</span>
+              <div class="year-pulse"></div>
+            </div>
+            <div class="timeline-content-enhanced">
+              <div class="timeline-icon">🤝</div>
+              <h3>Node.js Foundation</h3>
+              <div class="timeline-details">
+                <p>
+                  <strong>io.js Merger:</strong> Vereinigung nach
+                  Community-Split
+                </p>
+                <div class="detail-list">
+                  <div class="detail-item">
+                    <strong>Governance:</strong> Open Source Foundation mit
+                    demokratischen Entscheidungen
+                  </div>
+                  <div class="detail-item">
+                    <strong>Stabilität:</strong> Regelmäßige Releases und
+                    Long-Term Support (LTS)
+                  </div>
+                  <div class="detail-item">
+                    <strong>Wachstum:</strong> IBM, Intel, Microsoft, PayPal als
+                    Founding Members
+                  </div>
+                </div>
+                <div class="timeline-fact">
+                  <strong>🎉 Ergebnis:</strong> Node.js 4.0 - erste stabile,
+                  unified Version
+                </div>
+              </div>
+            </div>
+            <div class="timeline-arrow">➜</div>
+          </div>
+
+          <div class="timeline-item-enhanced" data-year="2024">
+            <div class="timeline-year-circle current-year">
+              <span class="year">2024</span>
+              <div class="year-pulse"></div>
+            </div>
+            <div class="timeline-content-enhanced">
+              <div class="timeline-icon">🌍</div>
+              <h3>Global Dominance</h3>
+              <div class="timeline-details">
+                <p>
+                  <strong>Weltweite Verbreitung:</strong> Die #1
+                  Backend-Technologie
+                </p>
+                <div class="detail-list">
+                  <div class="detail-item">
+                    <strong>NPM Registry:</strong> 3+ Millionen Pakete (größtes
+                    Software-Repository)
+                  </div>
+                  <div class="detail-item">
+                    <strong>Downloads:</strong> 30+ Milliarden npm Downloads pro
+                    Monat
+                  </div>
+                  <div class="detail-item">
+                    <strong>Usage:</strong> 85%+ der Fortune 500 Unternehmen
+                    nutzen Node.js
+                  </div>
+                </div>
+                <div class="timeline-fact">
+                  <strong>🏆 Legacy:</strong> Von experimentellem Projekt zur
+                  Industry-Standard-Plattform
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Impact Analysis -->
+        <div class="impact-analysis">
+          <h3>🎯 Node.js Impact auf die Entwicklerwelt</h3>
+
+          <div class="impact-grid">
+            <div class="impact-item before">
+              <h4>❌ Vor Node.js (2008)</h4>
+              <ul>
+                <li>
+                  <strong>Separate Teams:</strong> Frontend (JS) vs Backend
+                  (PHP/Java/.NET)
+                </li>
+                <li>
+                  <strong>Context Switching:</strong> Verschiedene Syntaxen und
+                  Paradigmen
+                </li>
+                <li>
+                  <strong>Performance:</strong> Thread-basierte Server,
+                  limitierte Concurrency
+                </li>
+                <li>
+                  <strong>Real-time:</strong> Komplexe Polling-Mechanismen für
+                  Live-Updates
+                </li>
+                <li>
+                  <strong>Deployment:</strong> Schwere Application Server
+                  (Tomcat, IIS)
+                </li>
+              </ul>
+            </div>
+
+            <div class="impact-arrow">
+              <div class="arrow-symbol">→</div>
+              <div class="transformation">Node.js Transformation</div>
+            </div>
+
+            <div class="impact-item after">
+              <h4>✅ Nach Node.js (2010+)</h4>
+              <ul>
+                <li>
+                  <strong>Full-Stack JS:</strong> Ein Team, eine Sprache für
+                  Frontend + Backend
+                </li>
+                <li>
+                  <strong>Unified Development:</strong> Gleiche Syntax,
+                  Libraries, Tools überall
+                </li>
+                <li>
+                  <strong>Event-Driven:</strong> Millionen concurrent
+                  connections mit weniger RAM
+                </li>
+                <li>
+                  <strong>Real-time Native:</strong> WebSockets, Socket.io für
+                  Live-Apps
+                </li>
+                <li>
+                  <strong>Microservices:</strong> Leichtgewichtige,
+                  containerisierte Services
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technology Evolution -->
+        <div class="tech-evolution">
+          <h3>🔬 Technologie-Evolution durch Node.js</h3>
+
+          <div class="evolution-timeline">
+            <div class="evolution-item">
+              <strong>2009-2011:</strong> Server-side JavaScript wird
+              realitätsfähig
+            </div>
+            <div class="evolution-item">
+              <strong>2012-2014:</strong> Single Page Applications (SPAs) boom
+            </div>
+            <div class="evolution-item">
+              <strong>2015-2017:</strong> Microservices Architecture wird
+              mainstream
+            </div>
+            <div class="evolution-item">
+              <strong>2018-2020:</strong> Serverless und Edge Computing mit
+              Node.js
+            </div>
+            <div class="evolution-item">
+              <strong>2021-2024:</strong> Full-Stack Frameworks (Next.js,
+              Nuxt.js) dominieren
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sektion 3: Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title">⚡ Node.js: 30 Schlüssel-Features</h2>
+        <div class="features-categories">
+          <button class="feature-filter active" data-category="all">
+            Alle
+          </button>
+          <button class="feature-filter" data-category="event">
+            Event Loop
+          </button>
+          <button class="feature-filter" data-category="modules">Module</button>
+          <button class="feature-filter" data-category="async">
+            Asynchronität
+          </button>
+          <button class="feature-filter" data-category="network">
+            Netzwerk
+          </button>
+          <button class="feature-filter" data-category="system">System</button>
+          <button class="feature-filter" data-category="data">Daten</button>
+          <button class="feature-filter" data-category="security">
+            Sicherheit
+          </button>
+          <button class="feature-filter" data-category="realtime">
+            Echtzeit
+          </button>
+          <button class="feature-filter" data-category="db">Datenbanken</button>
+          <button class="feature-filter" data-category="modulesys">
+            Modulsystem
+          </button>
+          <button class="feature-filter" data-category="patterns">
+            Muster
+          </button>
+          <button class="feature-filter" data-category="error">Fehler</button>
+        </div>
+        <div class="features-grid-advanced" id="features-grid">
+          <!-- Feature-Karten werden per JS hinzugefügt -->
+        </div>
+        <div class="features-benefits">
+          <h3>🔑 Schlüsselvorteile von Node.js</h3>
+          <ul>
+            <li>
+              ⚡ <strong>Hohe Leistung</strong> — Event Loop + Non-blocking I/O
+            </li>
+            <li>
+              📦 <strong>Riesiges Ökosystem</strong> — NPM mit Millionen Paketen
+            </li>
+            <li>
+              🌐 <strong>Vielseitigkeit</strong> — Frontend + Backend in einer
+              Sprache
+            </li>
+            <li>
+              🚀 <strong>Skalierbarkeit</strong> — Cluster-Modus + Worker
+              Threads
+            </li>
+            <li>
+              💡 <strong>Leicht zu lernen</strong> — JavaScript ist vielen
+              bekannt
+            </li>
+          </ul>
+          <p class="features-summary">
+            Diese 30 Features decken 95% aller Node.js-Anwendungsfälle ab und
+            machen es zu einem mächtigen Werkzeug für die Entwicklung!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Developer Benefits Resume Section -->
+    <section id="developer-benefits" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          🎯 Was bringen diese Vorteile den Entwicklern?
+        </h2>
+        <div class="developer-benefits-content">
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-icon">🚀</div>
+              <h3>Schnelle Entwicklung</h3>
+              <p>
+                JavaScript im Frontend und Backend ermöglicht die Nutzung einer
+                Sprache für die gesamte Anwendung, beschleunigt die Entwicklung
+                und vereinfacht die Wartung des Codes.
+              </p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">💼</div>
+              <h3>Karrierechancen</h3>
+              <p>
+                Full-Stack-Entwickler mit Node.js sind auf dem Arbeitsmarkt
+                gefragt, was mehr Möglichkeiten für Karriere und ein hohes
+                Gehalt eröffnet.
+              </p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">🔧</div>
+              <h3>Einfaches Skalieren</h3>
+              <p>
+                Die ereignisbasierte Architektur ermöglicht es, Anwendungen
+                einfach zu skalieren, um Millionen von Anfragen pro Tag zu
+                verarbeiten.
+              </p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">🌐</div>
+              <h3>Vielseitigkeit</h3>
+              <p>
+                Der gleiche Technologie-Stack für Webanwendungen, mobile Apps,
+                APIs und Microservices – spart Zeit beim Erlernen neuer
+                Technologien.
+              </p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">📦</div>
+              <h3>Reiches Ökosystem</h3>
+              <p>
+                Zugriff auf Millionen Pakete in npm ermöglicht es, Aufgaben
+                schnell zu lösen, ohne das Rad neu zu erfinden.
+              </p>
+            </div>
+            <div class="benefit-card">
+              <div class="benefit-icon">📈</div>
+              <h3>Leistung</h3>
+              <p>
+                Hohe Leistung ermöglicht die Verarbeitung von mehr Anfragen auf
+                derselben Hardware und senkt die Infrastrukturkosten.
+              </p>
+            </div>
+          </div>
+          <div class="developer-summary">
+            <h3>💡 Fazit für Entwickler</h3>
+            <p>
+              Das Erlernen von Node.js öffnet Ihnen die Tür zur modernen
+              Webentwicklung. Sie können leistungsfähige, skalierbare
+              Anwendungen mit vertrautem JavaScript erstellen. Es ist nicht nur
+              eine weitere Technologie – es ist der Weg zum
+              Full-Stack-Entwickler, der komplette Webanwendungen vom Frontend
+              bis zum Backend erstellen kann.
+            </p>
+            <p>
+              Mit Node.js werden Sie zum vielseitigen Spezialisten, der jede
+              Idee vom Prototyp bis zum skalierbaren Produkt umsetzen kann – mit
+              einer Programmiersprache und einem Ökosystem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sektion 4: Architektur -->
+    <!-- НОВАЯ СТРАНИЦА АРХИТЕКТУРА NODE.JS -->
+    <section id="architecture" class="section">
+      <div class="container">
+        <h1 class="section-title">🏗️ Architektur von Node.js</h1>
+        <p class="section-subtitle">
+          Wie funktioniert Node.js intern? Einfache Übersicht und Erklärungen.
+        </p>
+
+        <!-- Визуальная схема архитектуры -->
+        <div
+          class="architecture-diagram-simple"
+          style="display: flex; justify-content: center; margin-bottom: 2rem"
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              position: relative;
+            "
+          >
+            <div class="arch-block" style="background: #f3f3f3">
+              <strong>Ihr JS-Code</strong><br />
+              <span style="font-size: 0.95em; color: #555"
+                >Sie schreiben die Geschäftslogik der Anwendung in JavaScript.
+                Das sind die Verarbeitung von Anfragen, das Routing, die Arbeit
+                mit Daten.</span
+              >
+            </div>
+            <div class="arch-arrow">
+              <svg viewBox="0 0 32 32">
+                <path
+                  d="M16 4v20M16 24l-6-6M16 24l6-6"
+                  stroke="#90caf9"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div class="arch-block" style="background: #e0f7fa">
+              <strong>Node.js API</strong><br />
+              <span style="font-size: 0.95em; color: #555"
+                >Eingebaute Module (fs, http, path, crypto) ermöglichen die
+                Arbeit mit Dateien, Netzwerken, Streams, Verschlüsselung usw.
+                ohne externe Bibliotheken.</span
+              >
+            </div>
+            <div class="arch-arrow">
+              <svg viewBox="0 0 32 32">
+                <path
+                  d="M16 4v20M16 24l-6-6M16 24l6-6"
+                  stroke="#90caf9"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div class="arch-block" style="background: #ffe0b2">
+              <strong>Event Loop</strong><br />
+              <span style="font-size: 0.95em; color: #555"
+                >Der zentrale Zyklus, der alle Ereignisse und Aufgaben asynchron
+                verarbeitet, ohne den Haupt-Thread zu blockieren. Er macht
+                Node.js schnell und reaktionsfähig.</span
+              >
+            </div>
+            <div class="arch-arrow">
+              <svg viewBox="0 0 32 32">
+                <path
+                  d="M16 4v20M16 24l-6-6M16 24l6-6"
+                  stroke="#90caf9"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div class="arch-block" style="background: #dcedc8">
+              <strong>libuv + C++</strong><br />
+              <span style="font-size: 0.95em; color: #555"
+                >Die libuv-Bibliothek in C++ verwaltet asynchronen I/O, Threads,
+                Ereigniswarteschlangen und die Interaktion mit dem OS. Sie
+                verbirgt die Komplexität der Arbeit mit
+                Low-Level-Operationen.</span
+              >
+            </div>
+            <div class="arch-arrow">
+              <svg viewBox="0 0 32 32">
+                <path
+                  d="M16 4v20M16 24l-6-6M16 24l6-6"
+                  stroke="#90caf9"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div class="arch-block" style="background: #c5cae9">
+              <strong>Betriebssystem</strong><br />
+              <span style="font-size: 0.95em; color: #555"
+                >Node.js interagiert direkt mit dem OS, um auf das Dateisystem,
+                Netzwerke, Prozesse und Threads zuzugreifen. Das ist die
+                unterste Ebene der Architektur.</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Краткое описание слоёв -->
+        <!-- <div class="architecture-explanation-simple">
+      <ul style="max-width:600px; margin:auto;">
+        <li><strong>Ваш JS-код:</strong> Вы пишете бизнес-логику на JavaScript.</li>
+        <li><strong>Node.js API:</strong> Встроенные модули для работы с файлами, сетью, криптографией.</li>
+        <li><strong>Event Loop:</strong> Главный цикл, который не блокируется и обрабатывает все задачи асинхронно.</li>
+        <li><strong>libuv:</strong> Библиотека на C++, которая управляет потоками и асинхронным вводом-выводом.</li>
+        <li><strong>ОС:</strong> Node.js взаимодействует с операционной системой для доступа к ресурсам.</li>
+      </ul>
+    </div> -->
+
+        <!-- Краткая аналогия -->
+        <div
+          class="architecture-analogy-simple"
+          style="margin: 2rem auto; max-width: 600px"
+        >
+          <h3>🍽️ Analogie: Node.js — der Super-Kellner</h3>
+          <p>
+            Statt vieler Kellner (Threads) ist Node.js ein schneller Kellner,
+            der alle Gäste bedient, ohne zu blockieren und ohne zu ermüden.
+          </p>
+        </div>
+
+        <!-- Schlüsselkomponenten der Architektur -->
+        <div class="key-components">
+          <h3>🔑 Schlüsselkomponenten der Architektur</h3>
+          <div class="components-grid">
+            <div class="component-card">
+              <div class="component-icon">🔄</div>
+              <h4>Single Thread</h4>
+              <p>Ein Haupt-Thread führt den JavaScript-Code aus</p>
+              <div class="component-detail">
+                Erstellt keine neuen Threads für jede Anfrage
+              </div>
+            </div>
+            <div class="component-card">
+              <div class="component-icon">📨</div>
+              <h4>Event Queue</h4>
+              <p>Ereigniswarteschlange für asynchrone Operationen</p>
+              <div class="component-detail">
+                Speichert Aufgaben, die auf Ausführung warten
+              </div>
+            </div>
+            <div class="component-card">
+              <div class="component-icon">🛠️</div>
+              <h4>Worker Threads</h4>
+              <p>Separate Threads für rechenintensive Aufgaben</p>
+              <div class="component-detail">Für CPU-intensive Operationen</div>
+            </div>
+            <div class="component-card">
+              <div class="component-icon">🚀</div>
+              <h4>V8 Engine</h4>
+              <p>Google-Engine für schnelle Ausführung von JS</p>
+              <div class="component-detail">
+                JIT-Kompilierung, Code-Optimierung
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Практический пример -->
+        <div class="practical-example">
+          <h3>💡 Praxisbeispiel: Blockierender vs. Nicht-blockierender Code</h3>
+          <div class="code-comparison">
+            <div class="code-block">
+              <h4>❌ Blockierender Code (schlecht)</h4>
+              <pre><code class="language-javascript">// Der Server "hängt" für 2 Sekunden
+app.get('/data', (req, res) => {
+  // Simulation einer schweren Operation
+  const start = Date.now();
+  while (Date.now() - start < 2000) {
+    // Warten 2 Sekunden
+  }
+  res.send('Daten geladen');
+  // ❌ Alle anderen Nutzer müssen warten!
+});</code></pre>
+              <div class="code-problem">
+                <strong>Problem:</strong> Blockiert den gesamten Server für 2
+                Sekunden
+              </div>
+            </div>
+            <div class="code-block">
+              <h4>✅ Nicht-blockierender Code (gut)</h4>
+              <pre><code class="language-javascript">// Der Server arbeitet weiter!
+app.get('/data', async (req, res) => {
+  // Asynchrone Operation
+  const data = await fetchDataFromDB();
+  res.send('Daten geladen');
+});
+
+async function fetchDataFromDB() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('Daten aus der Datenbank');
+    }, 2000);
+  });
+}
+// ✅ Andere Anfragen werden sofort bearbeitet!</code></pre>
+              <div class="code-solution">
+                <strong>Vorteil:</strong> Der Server bleibt reaktionsfähig
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Performance Metrics -->
+        <div class="performance-metrics">
+          <h4>📊 Architecture Performance Metrics</h4>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-value">65,000</div>
+              <div class="metric-label">Requests/sec</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">1M+</div>
+              <div class="metric-label">Concurrent Connections</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">~15MB</div>
+              <div class="metric-label">Memory Footprint</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">< 1ms</div>
+              <div class="metric-label">Event Loop Latency</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="demos" class="section">
+      <div class="container">
+        <h2 class="section-title">🎮 Interaktive Demos</h2>
+
+        <div class="demos-grid">
+          <!-- Demo 1: File System Demo -->
+          <div class="demo-card">
+            <h3>📁 File System API Demo</h3>
+            <div class="demo-description">
+              <p>
+                <strong>🎯 Was passiert beim Klick:</strong><br />
+                • <strong>Server-Anfrage:</strong> XMLHttpRequest an
+                /api/files<br />
+                • <strong>Backend-Prozess:</strong> Node.js liest
+                Projektverzeichnis mit fs.readdir()<br />
+                • <strong>Erwartetes Ergebnis:</strong> Liste aller Dateien und
+                Ordner im Projekt<br />
+              </p>
+            </div>
+            <div class="feature-example">
+              const fs = require('fs');<br />
+              fs.readdir('./', (err, files) => {<br />
+              &nbsp;&nbsp;if (err) throw err;<br />
+              &nbsp;&nbsp;res.json({ files, success: true });<br />
+              });
+            </div>
+            <button class="demo-btn" onclick="loadFiles()">
+              📂 Dateien laden & anzeigen
+            </button>
+            <div id="files-result" class="demo-result"></div>
+          </div>
+
+          <!-- Demo 2: Environment Variables -->
+          <div class="demo-card">
+            <h3>🔧 System Environment Demo</h3>
+            <div class="demo-description">
+              <p>
+                <strong>🎯 Was Sie sehen werden:</strong><br />
+                • <strong>Node.js Version:</strong> Aktuelle Runtime-Version
+                (z.B. v23.11.1)<br />
+                • <strong>Platform:</strong> Betriebssystem (linux, darwin,
+                win32)<br />
+                • <strong>Port:</strong> Server läuft auf Port 3000<br />
+                • <strong>Uptime:</strong> Wie lange der Server bereits läuft
+                (in Sekunden)
+              </p>
+            </div>
+            <div class="feature-example">
+              const systemInfo = {<br />
+              &nbsp;&nbsp;nodeVersion: process.version,<br />
+              &nbsp;&nbsp;platform: process.platform,<br />
+              &nbsp;&nbsp;uptime: process.uptime(),<br />
+              &nbsp;&nbsp;port: process.env.PORT || 3000<br />
+              };
+            </div>
+            <p>
+              <strong>💡 Tipp:</strong> Diese Informationen sind nützlich für
+              Deployment und Debugging!
+            </p>
+            <button class="demo-btn" onclick="loadEnvInfo()">
+              🖥️ System-Info abrufen
+            </button>
+            <div id="env-result" class="demo-result"></div>
+          </div>
+
+          <!-- Demo 3: Real-time Chat -->
+          <div class="demo-card">
+            <h3>💬 Real-time Mini Chat</h3>
+            <div class="demo-description">
+              <p>
+                <strong>🎯 Funktionsweise:</strong><br />
+                • <strong>Senden:</strong> POST Request an /api/messages mit
+                Username & Text<br />
+                • <strong>Empfangen:</strong> GET Request holt alle Nachrichten
+                aus JSON-Dateи<br />
+                • <strong>Auto-Refresh:</strong> Nachrichten werden alle 10
+                Sekunden обновляются<br />
+                • <strong>Persistenz:</strong> Nachrichten werden in
+                messages.json сохраняются
+              </p>
+            </div>
+            <div class="feature-example">
+              // Nachricht speichern<br />
+              app.post('/api/messages', (req, res) => {<br />
+              &nbsp;&nbsp;const message = {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;username: req.body.username,<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;message: req.body.message,<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;timestamp: new
+              Date().toLocaleTimeString()<br />
+              &nbsp;&nbsp;};<br />
+              &nbsp;&nbsp;messages.push(message);<br />
+              &nbsp;&nbsp;fs.writeFileSync('messages.json',
+              JSON.stringify(messages));<br />
+              });
+            </div>
+            <p>
+              <strong>🚀 Probieren Sie es aus:</strong> Senden Sie eine
+              Nachricht und sehen Sie in Echtzeit erscheinen!
+            </p>
+
+            <div class="chat-container">
+              <div id="messages" class="messages"></div>
+              <div class="chat-input">
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="Ihr Name (z.B. Max)"
+                  value="Student"
+                />
+                <input
+                  type="text"
+                  id="message"
+                  placeholder="Ihre Nachricht здесь einggeben..."
+                />
+                <button onclick="sendMessage()">💬 Senden</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo 4: File Creation -->
+          <div class="demo-card">
+            <h3>📝 Datei-Erstellung Demo</h3>
+            <div class="demo-description">
+              <p>
+                <strong>🎯 Was passiert beim Erstellen:</strong><br />
+                • <strong>Input-Validierung:</strong> Dateiname und Inhalt будут
+                проверены<br />
+                • <strong>Server-Request:</strong> POST an
+                <code>/api/write-file</code> mit Daten<br />
+                • <strong>File Creation:</strong> Node.js создаст файл с
+                <code>fs.writeFile()</code><br />
+                • <strong>Erfolg-Mелдung:</strong> Vollständiger Pfad der
+                erstellten Datei wird angezeigt
+              </p>
+            </div>
+
+            <div class="feature-example">
+              const path = require('path');<br />
+              const fs = require('fs');<br />
+              <br />
+              app.post('/api/write-file', (req, res) => {<br />
+              &nbsp;&nbsp;const { filename, content } = req.body;<br />
+              &nbsp;&nbsp;const filePath = path.join(__dirname, 'created_files',
+              filename);<br />
+              &nbsp;&nbsp;<br />
+              &nbsp;&nbsp;fs.writeFile(filePath, content, 'utf8', (err) => {<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;if (err) return res.json({ success: false,
+              error: err.message });<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;res.json({ success: true, path: filePath
+              });<br />
+              &nbsp;&nbsp;});<br />
+              });
+            </div>
+
+            <p>
+              <strong>📋 Beispile von Testen:</strong><br />
+              • <strong>test.txt:</strong> "Hello Node.js World!"<br />
+              • <strong>package.json:</strong> {"name": "my-app", "version":
+              "1.0.0"}<br />
+              • <strong>README.md:</strong> # Mein Project auf Node.js
+            </p>
+
+            <div class="create-file">
+              <input
+                type="text"
+                id="filename"
+                placeholder="z.B. meine-datei.txt"
+              />
+              <textarea
+                id="file-content"
+                placeholder="Dateiinhalt hier eingeben...
+Beispiel:
+Hallo, Welt!
+Das ist meine erste Datei, erstellt mit Node.js."
+              ></textarea>
+              <button class="demo-btn" onclick="createFile()">
+                📁 Datei erstellen & speichern
+              </button>
+              <div id="create-result" class="demo-result"></div>
+            </div>
+          </div>
+
+          <!-- Demo 5: Express API Testing -->
+          <div class="demo-card">
+            <h3>🚀 Express.js API Testing</h3>
+            <div class="demo-description">
+              <p>
+                <strong>🎯 API Endpoints testen:</strong><br />
+                • <strong>GET /api/users:</strong> Liste aller Benutzer
+                abrufen<br />
+                • <strong>POST /api/users:</strong> Neuen Benutzer erstellen<br />
+                • <strong>GET /api/stats:</strong> Server-Statistiken
+                anzeigen<br />
+                • <strong>Antwort-Format:</strong> JSON mit Status und Daten
+              </p>
+            </div>
+            <div class="feature-example">
+              // GET /api/users<br />
+              app.get('/api/users', (req, res) => {<br />
+              &nbsp;&nbsp;res.json({<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;success: true,<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;users: mockUsers,<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;total: mockUsers.length<br />
+              &nbsp;&nbsp;});<br />
+              });
+            </div>
+
+            <div class="api-tester-advanced">
+              <div class="api-buttons">
+                <button onclick="testGetUsers()" class="api-btn get">
+                  📤 GET /api/users
+                </button>
+                <button onclick="testPostUser()" class="api-btn post">
+                  📤 POST /api/users
+                </button>
+                <button onclick="testGetStats()" class="api-btn get">
+                  📊 GET /api/stats
+                </button>
+              </div>
+              <div
+                id="api-result"
+                class="demo-result api-result-advanced"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Server-Statistiken -->
+        <div class="server-stats">
+          <h3>📊 Live-Server-Statistiken</h3>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-value" id="request-count">0</div>
+              <div class="stat-label">Anfragen</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="uptime">0</div>
+              <div class="stat-label">Sekunden Laufzeit</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" id="requests-per-minute">0</div>
+              <div class="stat-label">Anfragen/Min</div>
+            </div>
+          </div>
+          <div class="stats-buttons">
+            <button class="demo-btn" onclick="updateStats()">
+              Statistiken обновить
+            </button>
+            <button class="demo-btn reset-btn" onclick="resetStatistics()">
+              Statistiken zurücksetzen
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sektion 6: Interessante Fakten -->
+    <section id="facts" class="section">
+      <div class="container">
+        <h2 class="section-title">🤯 Interessante Fakten über Node.js</h2>
+
+        <div class="facts-grid">
+          <div class="fact-card">
+            <div class="fact-icon">🚀</div>
+            <h3>NASA verwendet Node.js</h3>
+            <p>
+              NASA verwendet Node.js zur Überwachung von Raumanzügen und zur
+              Gewährleistung der Sicherheit von Astronauten!
+            </p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">📺</div>
+            <h3>Netflix spart eine Milliarde Dollar</h3>
+            <p>
+              Netflix hat sein Interface auf Node.js umgeschrieben und die
+              Startzeit um 70% reduziert!
+            </p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">📦</div>
+            <h3>NPM - das größte Repository</h3>
+            <p>
+              NPM hat über 2 Millionen Pakete - mehr als jede andere
+              Programmiersprache!
+            </p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">⚡</div>
+            <h3>Ein Thread, Millionen von Verbindungen</h3>
+            <p>
+              Node.js kann Tausende gleichzeitiger Verbindungen mit nur einem
+              einzigen Thread verarbeiten!
+            </p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">🏢</div>
+            <h3>Wer verwendet Node.js?</h3>
+            <p>
+              Uber, PayPal, eBay, Microsoft, IBM, Google - und das ist nur der
+              Anfang der Liste!
+            </p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">📈</div>
+            <h3>Wachsende Popularität</h3>
+            <p>
+              Node.js wird mehr als 3 Milliarden Mal pro Monat heruntergeladen!
+            </p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">🔍</div>
+            <h3>Google's V8 Engine</h3>
+            <p>
+              Node.js verwendet Googles V8 JavaScript Engine, die auch in Chrome
+              verwendet wird und JavaScript in Maschinencode kompiliert!
+            </p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">📡</div>
+            <h3>Real-time Anwendungen</h3>
+            <p>
+              Node.js ist ideal für Echtzeitanwendungen wie Chats, Spiele und
+              Live-Dashboards dank seiner asynchronen Natur.
+            </p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">🏗️</div>
+            <h3>Microservices Architektur</h3>
+            <p>
+              Node.js ist perfekt für Microservices, was Unternehmen hilft, ihre
+              Anwendungen in kleine, wartbare Teile zu zerlegen.
+            </p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">📱</div>
+            <h3>Mobile App Entwicklung</h3>
+            <p>
+              Mit Node.js können Entwickler Backend-Dienste für mobile Apps
+              schnell erstellen und verwalten.
+            </p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">🌐</div>
+            <h3>Single Page Applications (SPA)</h3>
+            <p>
+              Node.js ist die bevorzugte Technologie für die Entwicklung von
+              Single-Page-Anwendungen mit React, Vue und Angular.
+            </p>
+          </div>
+
+          <div class="fact-card">
+            <div class="fact-icon">🔒</div>
+            <h3>Sicherheit</h3>
+            <p>
+              Node.js bietet eingebaute Sicherheitsfunktionen und eine aktive
+              Community, die Sicherheitslücken schnell behebt.
+            </p>
+          </div>
+        </div>
+
+        <div class="comparison-table">
+          <h3>📊 Node.js vs Andere Technologien - Detaillierter Vergleich</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Kriterium</th>
+                <th>Node.js</th>
+                <th>PHP</th>
+                <th>Python</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Geschwindigkeit -->
+              <tr>
+                <td><strong>⚡ Geschwindigkeit</strong></td>
+                <td class="advantage">
+                  🥇 <strong>Sehr schnell</strong><br />
+                  • I/O Operationen: ⚡<br />
+                  • CPU Tasks: 🐌<br />
+                  • Event-Loop Architektur
+                </td>
+                <td>
+                  🥉 <strong>Mittel</strong><br />
+                  • Traditionell: 🐌<br />
+                  • PHP 8 JIT: ⚡<br />
+                  • Gut für Web
+                </td>
+                <td>
+                  🥈 <strong>Variabel</strong><br />
+                  • Synchron: 🐌<br />
+                  • Async (FastAPI): ⚡<br />
+                  • CPU: 🥇
+                </td>
+              </tr>
+
+              <!-- Lernaufwand -->
+              <tr>
+                <td><strong>📚 Lernaufwand</strong></td>
+                <td class="advantage">
+                  🥈 <strong>Mittel</strong><br />
+                  • JS Kenntnisse: 😊<br />
+                  • Async Konzepte: 🤔<br />
+                  • Event Loop: 🧠
+                </td>
+                <td>
+                  🥇 <strong>Einfach</strong><br />
+                  • Geringе Einstiegshürde<br />
+                  • Linearer Code-Fluss<br />
+                  • Große Community
+                </td>
+                <td>
+                  🥇 <strong>Einfach</strong><br />
+                  • Lesbarer Code<br />
+                  • Klare Syntax<br />
+                  • Gut für Anfänger
+                </td>
+              </tr>
+
+              <!-- Ökosystem -->
+              <tr>
+                <td><strong>📦 Ökosistema</strong></td>
+                <td class="advantage">
+                  🥇 <strong>NPM - Riesig</strong><br />
+                  • 2M+ Pakete<br />
+                  • Express, Nest, Fastify<br />
+                  • Sehr aktiv
+                </td>
+                <td>
+                  🥈 <strong>Sehr gut</strong><br />
+                  • Packagist: 300K+<br />
+                  • Laravel, Symfony<br />
+                  • Etabliert
+                </td>
+                <td>
+                  🥈 <strong>Exzellent</strong><br />
+                  • PyPI: 400K+<br />
+                  • Django, FastAPI, Flask<br />
+                  • Data Science Fokus
+                </td>
+              </tr>
+
+              <!-- Skalierbarkeit -->
+              <tr>
+                <td><strong>🏗️ Skalierbarkeit</strong></td>
+                <td class="advantage">
+                  🥇 <strong>Ausgezeichnet</strong><br />
+                  • Horizontal: 🚀<br />
+                  • Cluster Mode<br />
+                  • 10K+ Verbindungen
+                </td>
+                <td>
+                  🥈 <strong>Gut</strong><br />
+                  • Mit Frameworks: 📈<br />
+                  • Traditionell: 🐌<br />
+                  • Mehr Ressourcen
+                </td>
+                <td>
+                  🥈 <strong>Gut</strong><br />
+                  • Async Frameworks: 📈<br />
+                  • CPU-Skalierung: 🥇<br />
+                  • Microservices
+                </td>
+              </tr>
+
+              <!-- Echtzeit-Anwendungen -->
+              <tr>
+                <td><strong>🌐 Echtzeit</strong></td>
+                <td class="advantage">
+                  🥇 <strong>Ideal</strong><br />
+                  • WebSockets native<br />
+                  • Socket.io Library<br />
+                  • Echtzeit-Dashboards
+                </td>
+                <td>
+                  🥉 <strong>Begrenzt</strong><br />
+                  • Zusätzliche Server<br />
+                  • Ratchet, Swoole<br />
+                  • Polling oft benötigt
+                </td>
+                <td>
+                  🥈 <strong>Gut</strong><br />
+                  • ASGI Support<br />
+                  • WebSockets möglich<br />
+                  • FastAPI Async
+                </td>
+              </tr>
+
+              <!-- Enterprise-Reife -->
+              <tr>
+                <td><strong>💼 Enterprise</strong></td>
+                <td>
+                  🥇 <strong>Sehr gut</strong><br />
+                  • Netflix, PayPal, Uber<br />
+                  • Microservices<br />
+                  • Hohe Leistung
+                </td>
+                <td>
+                  🥇 <strong>Ausgezeichnet</strong><br />
+                  • Facebook, WordPress<br />
+                  • Etabliert<br />
+                  • Viele Legacy-Systeme
+                </td>
+                <td>
+                  🥇 <strong>Sehr gut</strong><br />
+                  • Google, NASA, Instagram<br />
+                  • Data Science<br />
+                  • KI/ML Projekte
+                </td>
+              </tr>
+
+              <!-- Beste Use Cases -->
+              <tr>
+                <td><strong>🎯 Beste Anwendungen</strong></td>
+                <td class="advantage">
+                  • Chat-Apps<br />
+                  • API-Gateways<br />
+                  • Microservices<br />
+                  • Echtzeit-Apps
+                </td>
+                <td>
+                  • CMS Systeme<br />
+                  • E-Commerce<br />
+                  • Blogs<br />
+                  • Unternehmens-Websites
+                </td>
+                <td>
+                  • Data Science<br />
+                  • KI/ML<br />
+                  • Wissenschaft<br />
+                  • Automatisierung
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="comparison-summary">
+            <h4>📈 Zusammenfassung der Benchmarks</h4>
+            <div class="benchmark-grid">
+              <div class="benchmark-item">
+                <strong>Hello World (req/sec)</strong>
+                <div>Node.js: 15,000-25,000</div>
+                <div>PHP 8: 2,000-5,000</div>
+                <div>Python: 12,000-20,000</div>
+              </div>
+              <div class="benchmark-item">
+                <strong>Datenbank Abfragen</strong>
+                <div>Node.js: 8,000-15,000</div>
+                <div>PHP: 3,000-6,000</div>
+                <div>Python: 6,000-12,000</div>
+              </div>
+              <div class="benchmark-item">
+                <strong>Speichernutzung</strong>
+                <div>Node.js: ~25MB</div>
+                <div>PHP: ~45MB</div>
+                <div>Python: ~35MB</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="conclusion">
+          <h3>🎯 Fazit</h3>
+          <div class="conclusion-content">
+            <p>
+              <strong>Node.js</strong> - das ist nicht nur eine Technologie, das
+              ist eine Revolution in der Webentwicklung!
+            </p>
+            <ul>
+              <li>
+                🔥 <strong>Schneller Start:</strong> Wenn Sie JavaScript kennen
+                - können Sie bereits Server erstellen
+              </li>
+              <li>
+                ⚡ <strong>Hohe Leistung:</strong> Verarbeitet Tausende von
+                Anfragen gleichzeitig
+              </li>
+              <li>
+                🌍 <strong>Überall:</strong> Von mobilen Apps bis zu
+                NASA-Weltraumprojekten
+              </li>
+              <li>
+                💼 <strong>Gefragt:</strong> Top-Unternehmen der Welt suchen
+                Node.js Entwickler
+              </li>
+            </ul>
+            <p class="motivation">
+              Indem Sie heute Node.js lernen, investieren Sie in Ihre Zukunft in
+              der IT! 🚀
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
